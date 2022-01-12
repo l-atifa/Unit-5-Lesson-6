@@ -1,4 +1,4 @@
-import java.io.*;
+ import java.io.*;
 import static java.lang.System.*;
 import java.util.Scanner;
 
@@ -29,6 +29,30 @@ class Main {
      System.out.println("Are the books equal? " + b.equals(b));
      System.out.println("Are the books equal? " + b.equals(my));
      System.out.println("Are the books equal? " + b.equals(b2));
+
+     //making some default books
+     Book def1 = new Book(); //did not send any parameters, 
+     Book def2 = new Book();
+     Book def3 = new Book();
+     System.out.println("\nThis is default book 1:\n" + def1);
+     System.out.println("Are the books equal? " + def1.equals(def2));
+
+     System.out.println();
+
+     //Create Library
+     Library lib = new Library();
+     System.out.println(lib);
+     lib.addBooks(b);
+     lib.addBooks(b2);
+     lib.addBooks(my);
+     lib.addBooks(def1);
+     lib.addBooks(def2);
+     lib.increaseSize();
+     System.out.println("\n" + lib);
+
+     lib.addBooks(def2);
+     System.out.println("\n" + lib);
+
 
   }
 }

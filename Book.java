@@ -16,13 +16,24 @@ public class Book
   //same number of parameters as instance data
   {
     //instance data getting populated/assgined value _ (y) when we create object
-    title = t;
-    author = a;
-    year = y;
-    numPages = n;
-    hardcover = h;
+    setTitle(t); //using mutator to assign parameter to instance data
+    setAuthor(a); 
+    setYear(y);
+    setNumPages(n);
+    setHardcover(h);
   }
   
+  //overloading the Consructor
+  public Book()
+  {
+    //title = "none";
+    //setAuthor("unknown");
+    //instead
+    this("none", "unknown", 1900, 1, false); //using this, go to this class and look
+    //in this class look for a constructor with string string int int boolean
+    //only used in class, not tester program
+  }
+
   //Accessor Methods
   public String getTitle()
   {
